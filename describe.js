@@ -6,6 +6,7 @@ assert.equal = t.assertEquals;
 assert.doesNotThrow = f => f();
 assert.throws = t.assertThrows;
 assert.deepEqual = t.assertEquals;
+assert.ok = t.assert;
 
 //console.log(t);
 
