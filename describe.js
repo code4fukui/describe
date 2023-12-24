@@ -11,4 +11,7 @@ assert.ok = t.assert;
 //console.log(t);
 
 export const describe = (name, func) => func();
-export const it = (name, func) => Deno.test(name, func);
+export const it = (name, func) => {
+  const done = () => {};
+  Deno.test(name, () => func(done));
+};
